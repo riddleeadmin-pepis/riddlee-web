@@ -1,15 +1,23 @@
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Stats from "../components/Stats";
+import WhyChooseUs from "../components/WhyChooseUs";
+import Categories from "../components/Categories";
+import PromotionBanner from "../components/PromotionBanner";
+import FeaturedProducts from "../components/FeaturedProducts";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
     <>
       <Header />
-
-      <main>
-        <h1 className="p-10 text-center text-5xl font-bold text-blue-600">
-          Bienvenido a Riddlee
-        </h1>
-      </main>
+      <Hero />
+      <Stats />
+      <WhyChooseUs />
+      <Categories />
+      <PromotionBanner />
+      <FeaturedProducts />
+      <Testimonials />
     </>
   );
 }

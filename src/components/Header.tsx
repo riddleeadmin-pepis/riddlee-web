@@ -1,32 +1,48 @@
+import { Link } from "react-router-dom";
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white shadow-sm">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
 
         {/* Logo */}
-        <div>
-          <h1 className="text-2xl font-bold text-blue-600">
+        <Link to="/">
+          <h1 className="text-2xl font-bold text-blue-600 transition hover:text-blue-700">
             Riddlee
           </h1>
-        </div>
+        </Link>
 
         {/* Menú */}
         <nav className="hidden items-center gap-8 md:flex">
-          <a href="#" className="transition hover:text-blue-600">
+
+          <Link
+            to="/"
+            className="font-medium transition hover:text-blue-600"
+          >
             Inicio
-          </a>
+          </Link>
 
-          <a href="#" className="transition hover:text-blue-600">
+          <Link
+            to="/productos"
+            className="font-medium transition hover:text-blue-600"
+          >
             Productos
-          </a>
+          </Link>
 
-          <a href="#" className="transition hover:text-blue-600">
+          <Link
+            to="#"
+            className="font-medium transition hover:text-blue-600"
+          >
             Categorías
-          </a>
+          </Link>
 
-          <a href="#" className="transition hover:text-blue-600">
+          <Link
+            to="#"
+            className="font-medium transition hover:text-blue-600"
+          >
             Contacto
-          </a>
+          </Link>
+
         </nav>
 
         {/* Botón */}
