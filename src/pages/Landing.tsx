@@ -1,11 +1,13 @@
-import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
+import {
+  FaInstagram,
+  FaTiktok,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 import TopographicBackground from "../components/TopographicBackground";
 import logoRiddlee from "../assets/riddlee-logo.png";
 
 export default function Landing() {
-  // Número oficial de WhatsApp Business de Riddlee.
-  // Formato: código de país + número, sin +, espacios ni guiones.
   const whatsappNumber = "51912624115";
 
   const whatsappMessage =
@@ -15,77 +17,102 @@ export default function Landing() {
     whatsappMessage
   )}`;
 
+  const instagramUrl = "https://www.instagram.com/riddlee.store/";
+  const tiktokUrl = "https://www.tiktok.com/@riddlee.store";
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
+      {/* Fondo animado */}
       <TopographicBackground />
 
-      <section className="relative z-10 flex min-h-screen items-center justify-center px-5 py-8 sm:px-6 sm:py-12">
-        <div className="w-full max-w-4xl text-center">
-
-          <div className="mb-5 flex justify-center sm:mb-6">
+      {/* Contenido principal */}
+      <div className="relative z-10 flex min-h-screen flex-col">
+        <section className="flex flex-1 items-center justify-center px-5 py-10 sm:px-8">
+          <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+            {/* Logo */}
             <img
               src={logoRiddlee}
               alt="Riddlee"
-              className="w-52 drop-shadow-[0_0_30px_rgba(255,255,255,0.15)] sm:w-56 md:w-60"
+              className="mb-4 w-52 sm:w-56 md:w-60"
             />
-          </div>
 
-          <p className="mb-4 text-sm uppercase tracking-[0.42em] text-gray-400 sm:mb-5 sm:text-sm">
-            Muy pronto
-          </p>
+            {/* Etiqueta */}
+            <div className="mb-5 rounded-full border border-white/20 bg-white/5 px-5 py-2 backdrop-blur-sm">
+              <span className="text-xs font-semibold tracking-[0.35em] text-white/80 sm:text-sm">
+                MUY PRONTO
+              </span>
+            </div>
 
-          <h1 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight sm:text-4xl md:text-5xl">
-            Estamos preparando nuestra tienda online
-          </h1>
+            {/* Título */}
+            <h1 className="max-w-2xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              Estamos preparando nuestra tienda online
+            </h1>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-gray-300 sm:mt-6 sm:text-lg">
-            Mientras terminamos nuestra nueva experiencia de compra,
-            puedes conocer nuestros productos y realizar tus pedidos
-            directamente por WhatsApp.
-          </p>
+            {/* Descripción */}
+            <p className="mt-5 max-w-xl text-sm leading-7 text-white/65 sm:text-base">
+              Mientras terminamos nuestra nueva experiencia de compra, puedes
+              conocer nuestros productos y realizar tus pedidos directamente
+              por WhatsApp.
+            </p>
 
-          <p className="mt-5 text-base text-gray-300 sm:text-base">
-            🚚 Envíos a Lima y a todo el Perú
-          </p>
+            {/* Envíos */}
+            <p className="mt-5 text-sm font-medium text-white/80 sm:text-base">
+              🚚 Envíos a Lima y a todo el Perú
+            </p>
 
-          <div className="mt-8 sm:mt-9">
+            {/* WhatsApp */}
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full max-w-sm items-center justify-center gap-3 rounded-full bg-green-500 px-7 py-4 text-lg font-semibold text-white shadow-lg transition duration-300 hover:scale-105 hover:bg-green-600 sm:w-auto sm:px-8"
+              className="mt-8 flex w-full max-w-sm items-center justify-center gap-3 rounded-2xl bg-green-500 px-6 py-4 text-base font-semibold text-white transition duration-300 hover:scale-[1.02] hover:bg-green-600 active:scale-[0.98]"
             >
               <FaWhatsapp className="text-2xl" />
               Comprar por WhatsApp
             </a>
+
+            {/* Redes sociales */}
+            <div className="mt-9">
+              <p className="mb-4 text-xs uppercase tracking-[0.25em] text-white/40">
+                Síguenos
+              </p>
+
+              <div className="flex items-center justify-center gap-6">
+                {/* Instagram */}
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram de Riddlee"
+                  title="Instagram"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white/80 transition duration-300 hover:scale-110 hover:border-white/35 hover:bg-white/10 hover:text-white"
+                >
+                  <FaInstagram />
+                </a>
+
+                {/* TikTok */}
+                <a
+                  href={tiktokUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="TikTok de Riddlee"
+                  title="TikTok"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white/80 transition duration-300 hover:scale-110 hover:border-white/35 hover:bg-white/10 hover:text-white"
+                >
+                  <FaTiktok />
+                </a>
+              </div>
+            </div>
           </div>
+        </section>
 
-          <div className="mt-9 flex items-center justify-center gap-9 sm:mt-10">
-            <a
-              href="https://www.instagram.com/riddlee.store/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram de Riddlee"
-              className="text-4xl text-gray-200 transition duration-300 hover:scale-110 hover:text-white sm:text-3xl"
-            >
-              <FaInstagram />
-            </a>
-
-            <span
-              aria-label="TikTok de Riddlee"
-              title="TikTok próximamente"
-              className="cursor-default text-4xl text-gray-600 sm:text-3xl"
-            >
-              <FaTiktok />
-            </span>
-          </div>
-
-          <p className="mt-10 text-xs text-gray-500 sm:mt-12 sm:text-sm">
+        {/* Footer */}
+        <footer className="relative z-10 px-5 pb-6 text-center">
+          <p className="text-xs text-white/30">
             © 2026 Riddlee. Todos los derechos reservados.
           </p>
-
-        </div>
-      </section>
+        </footer>
+      </div>
     </main>
   );
 }
