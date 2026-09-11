@@ -1,4 +1,5 @@
 import {
+  FaFacebookF,
   FaInstagram,
   FaTiktok,
   FaWhatsapp,
@@ -17,6 +18,7 @@ export default function Landing() {
     whatsappMessage
   )}`;
 
+  const facebookUrl = "https://www.facebook.com/people/Riddlee/61594093507641/";
   const instagramUrl = "https://www.instagram.com/riddlee.store/";
   const tiktokUrl = "https://www.tiktok.com/@riddlee.store";
 
@@ -78,6 +80,18 @@ export default function Landing() {
               </p>
 
               <div className="flex items-center justify-center gap-6">
+                {/* Facebook */}
+                <a
+                  href={facebookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook de Riddlee"
+                  title="Facebook"
+                  className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/5 text-xl text-white/80 transition duration-300 hover:scale-110 hover:border-white/35 hover:bg-white/10 hover:text-white"
+                >
+                  <FaFacebookF />
+                </a>
+
                 {/* Instagram */}
                 <a
                   href={instagramUrl}
