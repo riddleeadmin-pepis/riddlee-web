@@ -18,7 +18,7 @@ export default function Landing() {
     whatsappMessage
   )}`;
 
-  const facebookUrl = "https://www.facebook.com/people/Riddlee/61594093507641/";
+  const facebookUrl = "https://www.facebook.com/riddlee.store";
   const instagramUrl = "https://www.instagram.com/riddlee.store/";
   const tiktokUrl = "https://www.tiktok.com/@riddlee.store";
 
